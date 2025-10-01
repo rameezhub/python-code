@@ -1,0 +1,8 @@
+def fibonacci(s):
+    '''this the the doc string which i am trying for the first time'''
+    if(s==0 or s==1):
+        return 1
+    else:
+         return fibonacci(s-1)+fibonacci(s-2)
+print(fibonacci.__doc__)             
+print(fibonacci(4))  
