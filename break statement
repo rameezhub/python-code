@@ -1,0 +1,5 @@
+for i in range[20]: 
+    print(i+1)
+    if(i==10):
+       break
+print("5x",i,"=",5*i)
