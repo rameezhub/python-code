@@ -1,0 +1,7 @@
+name="RAJAT KUMAR"
+city="PRAYAGRAJ"
+clg="AMITY UNIVERSITY"
+print(input)
+print(f" my name is {name} and i am from {city} currently i am sudding in  {clg}")
+
+  
