@@ -1,0 +1,7 @@
+def average(a=90,b=25):
+   average =(a*b)/(a+b)
+   print(average)
+   
+   a=50
+   b=25
+   average(a,b)
