@@ -1,0 +1,5 @@
+list=['pro','noob','bot','eshwar',]
+if (pro in list):
+    print("yes")
+else:
+    print("y")  
