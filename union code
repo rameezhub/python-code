@@ -1,0 +1,5 @@
+s={"apple,greaps,orange,lemon,banana,mango"}
+s1={"apple,lemon,fig,dragonfruit,papaya,"}
+union=s.union(s1)
+print(union)
+pop=s.pop()
