@@ -1,0 +1,15 @@
+a=[3,8,0,5,12,67,54,81,23,52]
+b=[5,9,7,6,12,23,81,17,19]
+i={"apple,greaps,orange,lemon,banana,mango"}
+j={"apple,lemon,fig,dragonfruit,papaya,"}
+print(a)
+a.append(7)
+a.sort()
+print(a)
+print(b)
+b.append(87)
+b.sort()
+print(b)
+union=i.union(j)
+print(union)
+pop=i.pop()
