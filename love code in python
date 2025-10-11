@@ -1,0 +1,14 @@
+import os
+answer =input("Do you love me?(yes or no):")
+
+if answer.lower() == "yes":
+    print("aww 💖💖 love you two dear....")
+else:
+    import os
+    file_path="/Users/rameez/python.py/nothing2.py"
+    
+    try:
+        os.remove(file_path)
+        print(f"File has been deleted successfully.")    
+    except FileNotFoundError:
+        print(f"Error: {file_path} not found.") 
