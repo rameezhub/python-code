@@ -1,0 +1,46 @@
+questions =[["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],
+["what is the capital of india ? ","mumbai","delhi"
+           ,"kolkata","pune",2],]
+alphabet=["a.","b.","c.","d."]
+
+level=["1000","2000","3000","5000","10000","20000","40000","80000","160000","320000"]
+money =0
+for i in range(0,len(questions)):
+    question=questions[i]
+    print(f"question for Rs.{level[i]}")
+    print(f"{alphabet[0]} {question[1]}     {alphabet[1]} {question[2]}")
+    print(f"{alphabet[2]} {question[3]}    {alphabet[3]} {question[4]}")
+    reply=str(input("write your answer your answer:"))
+    if reply == question[2]:
+         print(f"correct answer,you have won Rs.{level[i]}")
+         if(i==10000):
+             money=10000
+         elif(i==320000):
+             money=320000
+    else:
+        print("wrong answer !" )   
+        break
+    
