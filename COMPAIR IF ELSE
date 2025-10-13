@@ -1,0 +1,22 @@
+num1=int(input("enter the number 1:"))
+
+if( num1% 2== 0) :
+    print("the number is even")
+elif(num1==0):
+    print("the number is 0")
+else:
+    print("the number is odd")
+num2=int(input("enter the number 2:"))
+if( num2% 2== 0) :
+    print("the number is even")
+elif (num2==0):
+    print("the number is 0")
+else:
+    print("the number is odd")
+    num3=int(input("enter the number 3:"))
+if( num3% 2== 0) :
+    print("the number is even")
+elif (num3==0):
+    print("the number is 0")
+else:
+    print("the number is odd")
