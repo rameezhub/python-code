@@ -1,0 +1,9 @@
+num1 = "30"
+num2 = "6"
+print("enter 1 for addition")
+print("Addition of two numbers is: ", int(num1) + int(num2))
+print("substraction  of two numbers is: ", int(num1) - int(num2))
+print("multiplication of two numbers is: ", int(num1) * int(num2))
+print("division of two numbers is: ", int(num1) / int(num2))
+print("the m is ",int(num1) % int(num2))
+print("the e",int(num1) // int(num2))
