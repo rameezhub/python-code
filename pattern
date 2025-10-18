@@ -1,0 +1,16 @@
+class EuropeanSocket:
+    def connect(self):
+        return "Connected to European socket"
+class AmericanSocket:
+    def connect(self):
+        return "Connected to American socket"
+class AmericanToEuropeanAdapter:
+    def __init__(self, american_socket):
+        self.american_socket = american_socket
+    def connect(self):
+        return self.american_socket.connect().replace("American", "European")
+if __name__ == "__main__":
+    american_socket = AmericanSocket()
+    adapter = AmericanToEuropeanAdapter(american_socket)
+    print(american_socket.connect())  
+    print(adapter.connect())          
