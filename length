@@ -1,0 +1,17 @@
+a="18"
+b="6"
+print("the sum is:",int(a)+int(b))
+print("the subtraction is:",int(a)-int(b))
+print("the  mul is:",int(a)*int(b))
+print("the devision is:",int(a)/int(b))
+print("the  modulus is:",int(a)%int(b))
+print("the e is:",int(a) //int(b))
+name = "shahidkhan najibkhan bijli"
+len1=len(name)
+print(len1)
+print(name[0:10])
+print(name[0:-16])
+for i in name:
+ print(i)
+    
+   
