@@ -1,0 +1,13 @@
+f=('file.py','r')
+i=0
+while True:
+    i=i+1
+    line=f.readline()
+    if not line:
+        break
+    std1=line.split(",")[0]
+    std2=line.split(",")[1]
+    std3=line.split(",")[2]
+    print(f"marks of student {i} in maths is:{std1}")
+    print(f"marks of student {i} in arts is:{std2}")
+    print(f"marks of student {i} in MD is:{std3}\n")
