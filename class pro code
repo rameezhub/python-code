@@ -1,0 +1,17 @@
+class pro:
+    
+    def __init__(self,nothing,pr):
+        print("")
+        self.nothing=nothing
+        self.pr=pr
+    @classmethod   
+    def fromstr(cls,rameez):
+        return cls(rameez.split("-")[0],rameez.split()[1])
+ 
+
+            
+a= pro("pro","bot")
+a.show()   
+rameez="eez-200"        
+b=pro.fromstr(rameez)
+b=pro("poo","poop" )  
