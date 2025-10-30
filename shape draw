@@ -1,0 +1,16 @@
+
+class Shape:
+    def draw(self):
+        print("Drawing a shape")
+
+class Circle(Shape):
+    def draw(self):
+        print("Drawing a Circle")
+
+class Square(Shape):
+    def draw(self):
+        print("Drawing a Square")
+shapes = [Circle(), Square(), Shape()]
+
+for shape in shapes:
+    shape.draw()
