@@ -1,0 +1,12 @@
+import pandas as pd
+data= {"Date":["2025-10-01", "2025-10-01", "2025-10-02", "2025-10-02", "2025-10-03", "2025-10-03"],
+"City": ["New York", "Los Angeles","New York", "Los Angeles", "New York", "Los Angeles"],
+"Temperature": [28, 32, 31, 29, 33, 35],
+"Humidity": [65, 50, 60,
+55, 70, 45]
+df = pd. DataFrame(data)
+print("Original DataFrame: \n", df)
+avg_temp = df groupby("City") ["Temperature"]. mean()
+print("\nAverage Temperature per City: \n", avg_temp)
+hot_days = df[df["Temperature"] > 30]
+print ("\nDays with Temperature above 30°C: \n", hot_days)
