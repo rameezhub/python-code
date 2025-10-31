@@ -1,0 +1,36 @@
+# Import necessary libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
+data = pd.read_csv('ecommerce_data.csv')
+
+
+print(data.head())
+
+avg_rating = data.groupby('Category')['Rating'].mean().reset_index()
+
+
+avg_rating = avg_rating.sort_values(by='Rating', ascending=False)
+
+
+print("Average Rating per Category:")
+print(avg_rating)
+
+
+plt.figure(figsize=(10,6))
+sns.barplot(x='Category', y='Rating', data=avg_rating, palette='viridis')
+
+
+plt.title('Average Rating by Product Category', fontsize=14)
+plt.xlabel('Product Category')
+plt.ylabel('Average Rating')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+
+plt.show()
+
+
+
