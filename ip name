@@ -1,0 +1,49 @@
+import time 
+login_attempts = {}
+
+MAX_FAILED_ATTEMPTS = 3
+LOCKOUT_TIME = 10 * 60  
+
+def login(username, password, ip_address):
+    if ip_address in login_attempts:
+        failed_attempts, lockout_time = login_attempts[ip_address]
+        if failed_attempts >= MAX_FAILED_ATTEMPTS:
+            if time.time() - lockout_time < LOCKOUT_TIME:
+                remaining_time = int(LOCKOUT_TIME - (time.time() - lockout_time))
+                print(f"Account locked. Try again in {remaining_time} seconds.")
+                return False  
+            else:
+                login_attempts[ip_address] = [0, 0]
+
+    correct_username = "admin"
+    correct_password = "password123"
+    
+    if username == correct_username and password == correct_password:
+        print("Login successful!")
+        return True
+    else:
+        print("Invalid credentials. Try again.")
+        
+        if ip_address in login_attempts:
+            login_attempts[ip_address][0] += 1
+        else:
+            login_attempts[ip_address] = [1, 0]  
+
+        if login_attempts[ip_address][0] >= MAX_FAILED_ATTEMPTS:
+            login_attempts[ip_address][1] = time.time()  
+            print("Maximum failed attempts reached. Account locked for 10 minutes.")
+        
+        return False
+if __name__ == "__main__":
+    
+    ip = "192.168.0.1"
+
+    login("admin", "wrongpass", ip)  
+    login("admin", "wrongpass", ip)  
+    login("admin", "wrongpass", ip)  
+    
+    time.sleep(5) 
+    login("admin", "wrongpass", ip)  
+    
+    time.sleep(6) 
+    login("admin", "password123", ip)
