@@ -1,0 +1,5 @@
+side = float(input("Enter the side length of the cube: "))
+
+surface_area = 6 * (side ** 2)
+
+print("The surface area of the cube is:", surface_area)
