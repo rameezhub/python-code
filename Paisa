@@ -1,0 +1,2 @@
+rupees = float(input("Enter rupees: "))
+print("Paise =", rupees * 100)
