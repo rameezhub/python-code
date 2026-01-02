@@ -1,0 +1,17 @@
+choice = 0
+
+while choice != 3:
+    print("1. Add")
+    print("2. Multiply")
+    print("3. Exit")
+    choice = int(input("Enter choice: "))
+
+    if choice == 1:
+        a = int(input("Enter a: "))
+        b = int(input("Enter b: "))
+        print("Sum =", a + b)
+
+    elif choice == 2:
+        a = int(input("Enter a: "))
+        b = int(input("Enter b: "))
+        print("Product =", a * b)
