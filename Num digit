@@ -1,0 +1,14 @@
+num = int(input("Enter a number: "))
+
+while num > 0:
+    digit = num % 10
+    count = 0
+    temp = num
+
+    while temp > 0:
+        if temp % 10 == digit:
+            count += 1
+        temp //= 10
+
+    print("Digit", digit, "occurs", count, "times")
+    num //= 10
