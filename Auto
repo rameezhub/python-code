@@ -1,0 +1,17 @@
+num = int(input("Enter a number: "))
+square = num * num
+
+temp = num
+is_auto = True
+
+while temp > 0:
+    if temp % 10 != square % 10:
+        is_auto = False
+        break
+    temp //= 10
+    square //= 10
+
+if is_auto:
+    print("Automorphic number")
+else:
+    print("Not an Automorphic number")
