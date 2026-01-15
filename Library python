@@ -1,0 +1,76 @@
+from datetime import datetime, timedelta
+
+FINE_PER_DAY = 5
+LOW_STOCK = 2
+
+# Books data
+books = [
+    {"id": 1, "title": "Python", "copies": 3},
+    {"id": 2, "title": "Data Structures", "copies": 2},
+    {"id": 3, "title": "AI Basics", "copies": 1}
+]
+
+borrow_history = []
+
+
+def search_book(name):
+    for b in books:
+        if name.lower() in b["title"].lower():
+            print(f"Found: {b['title']} (Available: {b['copies']})")
+
+
+def borrow_book(book_id, user):
+    for b in books:
+        if b["id"] == book_id:
+            if b["copies"] > 0:
+                b["copies"] -= 1
+                due_date = datetime.now() + timedelta(days=7)
+                borrow_history.append({
+                    "user": user,
+                    "book": b["title"],
+                    "due": due_date,
+                    "returned": False
+                })
+                print(f"{user} borrowed {b['title']}")
+                print("Due date:", due_date.date())
+
+                if b["copies"] <= LOW_STOCK:
+                    print("⚠ Low stock alert!")
+            else:
+                print("Book not available")
+            return
+    print("Invalid book ID")
+
+
+def return_book(user, book_title):
+    for r in borrow_history:
+        if r["user"] == user and r["book"] == book_title and not r["returned"]:
+            r["returned"] = True
+            today = datetime.now()
+            delay = (today - r["due"]).days
+            fine = delay * FINE_PER_DAY if delay > 0 else 0
+            print("Book returned")
+            print("Fine: ₹", fine)
+
+            for b in books:
+                if b["title"] == book_title:
+                    b["copies"] += 1
+            return
+    print("Record not found")
+
+
+def show_history():
+    for r in borrow_history:
+        status = "Returned" if r["returned"] else "Not Returned"
+        print(r["user"], "-", r["book"], "-", status)
+
+
+# ----- Test -----
+search_book("Python")
+
+borrow_book(3, "Ayesha")
+borrow_book(3, "Rahul")
+
+return_book("Rahul", "AI Basics")
+
+show_history()
