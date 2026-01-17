@@ -1,0 +1,8 @@
+copies = 1
+
+while copies > 0:
+    print("Book borrowed")
+    copies -= 1
+
+if copies == 0:
+    print("No copies left")
