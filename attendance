@@ -1,0 +1,6 @@
+attendance = 72
+
+if attendance >= 75:
+    print("Allowed")
+else:
+    print("Not Allowed")
