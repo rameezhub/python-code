@@ -1,0 +1,4 @@
+n = 7
+
+if n > 5:
+    print("Greater than 5
