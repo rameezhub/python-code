@@ -1,0 +1,9 @@
+books = {"Python": 1}
+due, returned = 7, 10
+
+if books["Python"] > 0:
+    books["Python"] -= 1
+    print("Book borrowed")
+
+fine = (returned - due) * 5 if returned > due else 0
+print("Late fine:", fine)
