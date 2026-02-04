@@ -1,0 +1,7 @@
+e = 34
+d = 5
+
+if e > d:
+    print("e is bigger")
+else:
+    print("d is bigger")
