@@ -1,0 +1,8 @@
+# Area of a Rhombus
+
+d1 = float(input("Enter first diagonal: "))
+d2 = float(input("Enter second diagonal: "))
+
+area = 0.5 * d1 * d2
+
+print("Area of the rhombus is:", area)
