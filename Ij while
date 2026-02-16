@@ -1,0 +1,6 @@
+for i in range(3):
+    print("For:", i)
+
+j = 0
+while j < 3:
+    print("While:", j)
