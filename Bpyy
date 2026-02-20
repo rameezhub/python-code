@@ -1,0 +1,9 @@
+books = {"Python": 2}
+due_day, return_day = 10, 14
+
+if books["Python"] > 0:
+    books["Python"] -= 1
+    print("Book borrowed")
+
+fine = max(0, return_day - due_day) * 5
+print("Fine:", fine)
