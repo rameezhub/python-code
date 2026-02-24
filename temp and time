@@ -1,0 +1,19 @@
+import random
+import time
+
+def temperature_sensor():
+    """Generator that simulates real-time temperature data"""
+    while True:  # Infinite stream
+        temperature = round(random.uniform(20.0, 35.0), 2)
+        yield temperature
+        time.sleep(1)  # Simulate real-time delay
+
+
+# Using the generator safely
+sensor = temperature_sensor()
+
+try:
+    for _ in range(5):  # Controlled stop after 5 readings
+        print("Temperature:", next(sensor), "°C")
+except KeyboardInterrupt:
+    print("Sensor stopped manually.")
