@@ -1,0 +1,4 @@
+length = int(input("Enter a length: "))
+breath = int(input("Enter a breath: "))
+area of rectangle = length * breath
+digits = len(str)
