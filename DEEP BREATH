@@ -1,0 +1,58 @@
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+from reportlab.lib.styles import getSampleStyleSheet
+
+file = "deep_breathing_meditation_story.pdf"
+
+styles = getSampleStyleSheet()
+
+title = "Creative Expression – The Power of Deep Breathing and Dhyan"
+
+story_text = """
+Arjun was a college student who always felt stressed because of exams,
+assignments, and expectations. His mind was always filled with worries
+about the future and fear of failure.
+
+One evening after receiving poor marks in a test, Arjun sat alone in the
+college garden feeling frustrated. His heart was racing and his mind
+was full of negative thoughts.
+
+While sitting there, he noticed an elderly man peacefully sitting under
+a tree with his eyes closed. Curious, Arjun asked him how he remained so
+calm in life.
+
+The man smiled and said, "The mind becomes restless when we forget to
+pause. Try deep breathing."
+
+He asked Arjun to sit comfortably, close his eyes, and take a slow deep
+breath. Arjun inhaled slowly and then released the breath gently.
+
+After repeating this for a few minutes, Arjun noticed something amazing.
+His mind became calmer and his heartbeat slowed down.
+
+The man then explained meditation, or Dhyan. Meditation helps us observe
+our thoughts without reacting to them.
+
+From that day, Arjun started practicing deep breathing and meditation
+for a few minutes every day. Slowly he became more focused, calm, and
+emotionally balanced.
+
+Whenever he faced challenges, he paused, took deep breaths, and allowed
+his mind to relax before making decisions.
+
+Arjun realized that problems may not disappear, but with deep breathing
+and meditation, the mind becomes strong enough to face them peacefully.
+"""
+
+content = []
+
+content.append(Paragraph(title, styles['Title']))
+content.append(Spacer(1, 20))
+
+for line in story_text.split("\n"):
+    content.append(Paragraph(line, styles['BodyText']))
+    content.append(Spacer(1, 10))
+
+pdf = SimpleDocTemplate(file)
+pdf.build(content)
+
+print("PDF Created Successfully!")
