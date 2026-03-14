@@ -1,0 +1,11 @@
+def decorator(func):
+    def wrapper(name):
+        print("Hello", name)
+        func(name)
+    return wrapper
+
+@decorator
+def welcome(name):
+    print("Welcome to Python")
+
+welcome("Rameez")
