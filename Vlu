@@ -1,0 +1,39 @@
+
+import matplotlib.pyplot as plt
+
+time_data = ["Jan", "Feb", "Mar", "Apr"]
+
+
+values_data = [100, 150, 130, 170]
+
+# Optional second dataset
+second_values_data = [90, 140, 120, 160]
+
+# -------------------------
+# CREATE LINE PLOT
+# -------------------------
+plt.figure()
+
+# Plot first dataset
+plt.plot(time_data, values_data, label="Dataset 1", marker="o")
+
+# Plot second dataset (optional)
+plt.plot(time_data, second_values_data, label="Dataset 2", marker="o")
+
+# -------------------------
+# ADD LABELS AND TITLE
+# -------------------------
+plt.xlabel("Time")
+plt.ylabel("Values")
+plt.title("Trend Over Time")
+
+# -------------------------
+# ADD LEGEND AND GRID
+# -------------------------
+plt.legend()
+plt.grid()
+
+# -------------------------
+# DISPLAY PLOT
+# -------------------------
+plt.show()
