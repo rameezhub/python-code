@@ -1,0 +1,11 @@
+class GradeReport:
+   def _init__(self, name, grades) :
+      self.name = name
+      self.grades = grades
+      self.average = sum(grades) / len(grades)
+      print(f"{self.name}'s Grades: {grades}, Average: {self.average: .2f}")
+
+
+
+student1 = GradeReport("Nisha",  [88, 92, 79, 85])
+print(student1)
